@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            background-color: aqua;
+            margin: 0;
+            height: 3000px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="nav bg-black w-full h-[60px] fixed z-10">
+        <div class="nav-left w-[24%] h-full relative">
+            <div class="fb-logo w-[40px] h-[40px] bg-[url('/svg/fb-logo.svg')] absolute top-[10px] left-[15px]"></div>
+            <div class="search bg-[#696969] w-[280px] h-[40px] absolute left-[60px] top-[10px] rounded-full">
+                <div class="magnifier w-[20px] h-[20px] bg-[url('/svg/放大鏡.svg')] bg-cover absolute top-[50%] -translate-y-2/4 left-[10px]"></div>
+                <div class="search-text text-white absolute left-[40px] top-[10px]">搜尋 Facebook</div>
+            </div>
+        </div>
+        <div class="nav-middle w-[800px] h-full absolute left-[50%] -translate-x-[400px] bottom-0">
+            <div class="frontpage w-[24px] h-[24px] absolute top-[18px]">
+                <div class="frontpage-img bg-[url('/svg/首頁.svg')] w-[23px] h-[23px]"></div>
+            </div>
+            <div class="friend w-[24px] h-[24px] absolute top-[18px] left-[200px]">
+                <div class="friend-img bg-[url('/svg/朋友.svg')] w-[23px] h-[23px]"></div>
+            </div>
+            <div class="video w-[24px] h-[24px] absolute top-[18px] left-[400px]">
+                <div class="video-img bg-[url('/svg/影片.svg')] w-[23px] h-[23px]"></div>
+            </div>
+            <div class="marketplace w-[24px] h-[24px] absolute top-[18px] left-[600px]">
+                <div class="marketplace-img bg-[url('/svg/marketplace.svg')] w-[23px] h-[23px]"></div>
+            </div>
+            <div class="game w-[24px] h-[24px] absolute top-[18px] right-0">
+                <div class="game-img bg-[url('/svg/遊戲.svg')] w-[23px] h-[23px]"></div>
+            </div>
+        </div>
+        <div class="nav-right h-full w-[200px] absolute right-0 bottom-0">
+            <div class="menu bg-[#696969] w-[40px] h-[40px] absolute top-[10px] rounded-full">
+                <div class="menu-img bg-[url('/svg/功能列表.svg')] w-[20px] h-[20px] absolute top-[10px] left-[10px] bg-cover"></div>
+            </div>
+            <div class="messenger bg-[#696969] w-[40px] h-[40px] absolute top-[10px] left-[50px] rounded-full">
+                <div class="messenger-img bg-[url('/svg/Messenger.svg')] w-[20px] h-[20px] absolute top-[10px] left-[10px]"></div>
+            </div>
+            <div class="notify bg-[#696969] w-[40px] h-[40px] absolute top-[10px] left-[100px] rounded-full">
+                <div class="notify-img bg-[url('/svg/小鈴鐺.svg')] w-[20px] h-[20px] absolute top-[10px] left-[10px]"></div>
+            </div>
+            <div class="my-avatar-small bg-[url('/img/小張頭貼.jpg')] w-[40px] h-[40px] absolute top-[10px] left-[150px] rounded-full">
+            </div>
+        </div>
+    </div>
+    <div class="container bg-gradient-to-b from-white to-black px-[60px] py-[100px]">
+        <div class="banner bg-[url('/img/封面.jpg')] w-[70%] h-[500px] m-auto rounded-b-[10px] bg-cover relative">
+            <div class="my-avatar-big bg-[url('/img/大張頭貼.jpg')] w-[180px] h-[180px] absolute -bottom-[150px] left-[30px] rounded-full border-[5px] border-black">
+                <div class="my-avatar-big-camera bg-[#696969]  w-[40px] h-[40px] absolute right-0 bottom-0 rounded-full">
+                    <div class="my-avatar-big-camera-img bg-[url('/img/照相機-黑.jpg')] w-[20px] h-[20px] bg-cover absolute top-[10px] left-[10px]"></div>
+                </div>
+            </div>
+            <div class="longstick-camera bg-[#f5f5f5] w-[136px] h-[36px] rounded-lg absolute right-[30px] bottom-[10px]">
+                <div class="camera-img bg-[url('/img/照相機.jpg')] w-[20px] h-[18px] bg-cover absolute left-[10px] top-[8px]">
+                </div>
+                <div class="camera-text absolute right-[5px] top-[6px]">
+                    編輯封面相片
+                </div>
+            </div>
+            <div class="pencilplus ">
+                <div class="longstick-plus">
+                    <div class="longstick-plus-img"></div>
+                    <div class="longstick-plus-text">
+                        新增到限時動態
+                    </div>
+                </div>
+                <div class="longstick-pencil">
+                    <div class="longstick-pencil-img"></div>
+                    <div class="longstick-pencil-text">
+                        編輯個人檔案
+                    </div>
+                </div>
+                <div class="arrow">
+                    #<div class="arrow-img"></div>
+                </div>
+            </div>
+            <div class="name">
+                小啾
+            </div>
+            <div class="friend-quantity">
+                0 位鳥友
+            </div>
+        </div>
+        <div class="photo-area w-[65%] h-[100px] my-[160px] mx-auto">
+        </div>
+    </div>
+</body>
+
+</html>

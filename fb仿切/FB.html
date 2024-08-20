@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: black;
+            margin: 0;
+            height: 3000px;
+        }
+
+        #nav {
+            background-color: black;
+            width: 100%;
+            height: 60px;
+            position: fixed;
+            z-index: 9;
+        }
+
+        #nav-left {
+            background-color: black;
+            width: 24%;
+            height: 100%;
+            position: relative;
+        }
+
+        #fb-logo {
+            background-image: url(./svg/fb-logo.svg);
+            width: 40px;
+            height: 40px;
+            position: absolute;
+            top: 10px;
+            left: 15px;
+        }
+
+        #search {
+            background-color: dimgray;
+            width: 280px;
+            height: 40px;
+            position: absolute;
+            left: 60px;
+            border-radius: 20px;
+            position: absolute;
+            top: 10px;
+        }
+
+        #magnifier {
+            background-image: url(./svg/放大鏡.svg);
+            background-size: cover;
+            width: 20px;
+            height: 20px;
+            position: absolute;
+            top: calc(50% - 10px);
+            left: 10px;
+        }
+
+        #search-text {
+            color: whitesmoke;
+            position: absolute;
+            left: 40px;
+            top: 10px
+        }
+
+        #nav-middle {
+            background-color: black;
+            height: 100%;
+            width: 800px;
+            position: absolute;
+            left: calc(50% - 400px);
+            bottom: 0px;
+        }
+
+        #frontpage {
+            background-color: black;
+            width: 24px;
+            height: 24px;
+            position: absolute;
+            top: 18px;
+        }
+
+        #frontpage-img {
+            background-image: url(./svg/首頁.svg);
+            width: 23px;
+            height: 23px;
+        }
+
+        #friend {
+            background-color: black;
+            width: 24px;
+            height: 24px;
+            position: absolute;
+            top: 18px;
+            left: 200px;
+        }
+
+        #friend-img {
+            background-image: url(./svg/朋友.svg);
+            width: 23px;
+            height: 23px;
+        }
+
+        #video {
+            background-color: black;
+            width: 24px;
+            height: 24px;
+            position: absolute;
+            top: 18px;
+            left: 400px;
+        }
+
+        #video-img {
+            background-image: url(./svg/影片.svg);
+            width: 23px;
+            height: 23px;
+        }
+
+        #marketplace {
+            background-color: black;
+            width: 24px;
+            height: 24px;
+            position: absolute;
+            top: 18px;
+            left: 600px;
+        }
+
+        #marketplace-img {
+            background-image: url(./svg/marketplace.svg);
+            width: 23px;
+            height: 23px;
+        }
+
+        #game {
+            background-color: black;
+            width: 24px;
+            height: 24px;
+            position: absolute;
+            top: 18px;
+            right: 0px;
+        }
+
+        #game-img {
+            background-image: url(./svg/遊戲.svg);
+            width: 23px;
+            height: 23px;
+        }
+
+        #nav-right {
+            background-color: black;
+            height: 100%;
+            width: 200px;
+            position: absolute;
+            right: 0px;
+            bottom: 0px;
+        }
+
+        #menu {
+            background-color: dimgray;
+            width: 40px;
+            height: 40px;
+            position: absolute;
+            top: 10px;
+            border-radius: 20px;
+        }
+
+        #menu-img {
+            background-image: url(./svg/功能列表.svg);
+            width: 20px;
+            height: 20px;
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            background-size: cover;
+        }
+
+        #messenger {
+            background-color: dimgray;
+            width: 40px;
+            height: 40px;
+            position: absolute;
+            top: 10px;
+            left: 50px;
+            border-radius: 20px;
+        }
+
+        #messenger-img {
+            background-image: url(./svg/Messenger.svg);
+            width: 20px;
+            height: 20px;
+            position: absolute;
+            top: 10px;
+            left: 10px;
+        }
+
+        #notify {
+            background-color: dimgray;
+            width: 40px;
+            height: 40px;
+            position: absolute;
+            left: 100px;
+            top: 10px;
+            border-radius: 20px;
+        }
+
+        #notify-img {
+            background-image: url(./svg/小鈴鐺.svg);
+            width: 20px;
+            height: 20px;
+            position: absolute;
+            top: 10px;
+            left: 10px;
+        }
+
+        #my-avatar-small {
+            background-image: url(./img/小張頭貼.jpg);
+            width: 40px;
+            height: 40px;
+            border-radius: 20px;
+            position: absolute;
+            top: 10px;
+            left: 150px;
+        }
+
+        #container {
+            background: linear-gradient(to top, black, white);
+            padding: 60px 100px;
+        }
+
+        #banner {
+            background-image: url(./img/封面.jpg);
+            width: 70%;
+            height: 500px;
+            margin: auto;
+            border-bottom-left-radius: 10px;
+            border-bottom-right-radius: 10px;
+            background-size: cover;
+            position: relative;
+        }
+
+        #my-avatar-big {
+            background-image: url(./img/大張頭貼.jpg);
+            width: 180px;
+            height: 180px;
+            position: absolute;
+            bottom: -150px;
+            left: 30px;
+            border-radius: 90px;
+            border: 5px solid black;
+        }
+
+        #my-avatar-big-camera{
+            background-color:dimgray;
+            width: 40px;
+            height: 40px;
+            position: absolute;
+            right: 0px;
+            bottom: 0px;
+            border-radius: 20px;
+        }
+        
+        #my-avatar-big-camera-img{
+            background-image: url(./img/照相機-黑.jpg);
+            width: 20px;
+            height: 20px;
+            background-size: cover;
+            position: absolute;
+            top: 10px;
+            left: 10px;
+        }
+
+        #longstick-camera {
+            background-color: whitesmoke;
+            width: 136px;
+            height: 36px;
+            border-radius: 8px;
+            position: absolute;
+            right: 30px;
+            bottom: 10px;
+        }
+
+        #camera-img {
+            background-image: url(./img/照相機.jpg);
+            width: 20px;
+            height: 18px;
+            background-size: cover;
+            position: absolute;
+            left: 10px;
+            top: 8px;
+        }
+
+        #camera-text {
+            position: absolute;
+            right: 5px;
+            top: 6px;
+        }
+
+        #photo-area {
+            width: 65%;
+            height: 100px;
+            margin: 160px auto;
+            border-top: 1px solid whitesmoke;
+        }
+
+        #pencilplus {
+            width: 360px;
+            height: 44px;
+            position: absolute;
+            bottom: -150px;
+            right: 30px;
+        }
+
+        #longstick-plus {
+            background-color: blue;
+            width: 150px;
+            height: 36px;
+            position: absolute;
+            top: 4px;
+            border-radius: 10px;
+        }
+
+        #longstick-plus-img {
+            background-image: url(./svg/+號.svg);
+            width: 20px;
+            height: 20px;
+            background-size: cover;
+            position: absolute;
+            top: 8px;
+            left: 5px;
+        }
+
+        #longstick-plus-text {
+            color: white;
+            position: absolute;
+            top: 8px;
+            right: 10px;
+        }
+
+        #longstick-pencil {
+            background-color: black;
+            width: 136px;
+            height: 36px;
+            position: absolute;
+            left: 160px;
+            top: 4px;
+            border-radius: 10px;
+        }
+
+        #longstick-pencil-img {
+            background-image: url(./img/pencil.jpg);
+            width: 20px;
+            height: 20px;
+            position: absolute;
+            top: 8px;
+            left: 10px;
+        }
+
+        #longstick-pencil-text {
+            color: white;
+            position: absolute;
+            top: 8px;
+            right: 5px;
+        }
+
+        #arrow {
+            background-color: black;
+            width: 48px;
+            height: 36px;
+            position: absolute;
+            right: 5px;
+            top: 4px;
+            border-radius: 10px;
+        }
+
+        #arrow-img {
+            background-image: url(./svg/向下箭頭.svg);
+            width: 20px;
+            height: 20px;
+            background-size: cover;
+            position: absolute;
+            top: 9px;
+            left: 15px;
+        }
+
+        #name {
+            color: white;
+            width: 80px;
+            height: 60px;
+            text-align: center;
+            font-weight: 20px;
+            font-size: 35px;
+            position: absolute;
+            bottom: -70px;
+            left: 230px;
+        }
+
+        #friend-quantity {
+            color: white;
+            width: 100px;
+            height: 40px;
+            position: absolute;
+            bottom: -100px;
+            left: 240px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="nav">
+        <div id="nav-left">
+            <div id="fb-logo"></div>
+            <div id="search">
+                <div id="magnifier"></div>
+                <div id="search-text">搜尋 Facebook</div>
+            </div>
+        </div>
+        <div id="nav-middle">
+            <div id="frontpage">
+                <div id="frontpage-img"></div>
+            </div>
+            <div id="friend">
+                <div id="friend-img"></div>
+            </div>
+            <div id="video">
+                <div id="video-img"></div>
+            </div>
+            <div id="marketplace">
+                <div id="marketplace-img"></div>
+            </div>
+            <div id="game">
+                <div id="game-img"></div>
+            </div>
+        </div>
+        <div id="nav-right">
+            <div id="menu">
+                <div id="menu-img"></div>
+            </div>
+            <div id="messenger">
+                <div id="messenger-img"></div>
+            </div>
+            <div id="notify">
+                <div id="notify-img"></div>
+            </div>
+            <div id="my-avatar-small">
+            </div>
+        </div>
+    </div>
+    <div id="container">
+        <div id="banner">
+            <div id="my-avatar-big">
+                <div id="my-avatar-big-camera">
+                    <div id="my-avatar-big-camera-img"></div>
+                </div>
+            </div>
+            <div id="longstick-camera">
+                <div id="camera-img">
+                </div>
+                <div id="camera-text">
+                    編輯封面相片
+                </div>
+            </div>
+            <div id="pencilplus">
+                <div id="longstick-plus">
+                    <div id="longstick-plus-img"></div>
+                    <div id="longstick-plus-text">
+                        新增到限時動態
+                    </div>
+                </div>
+                <div id="longstick-pencil">
+                    <div id="longstick-pencil-img"></div>
+                    <div id="longstick-pencil-text">
+                        編輯個人檔案
+                    </div>
+                </div>
+                <div id="arrow">
+                    #<div id="arrow-img"></div>
+                </div>
+            </div>
+            <div id="name">
+                小啾
+            </div>
+            <div id="friend-quantity">
+                0 位鳥友
+            </div>
+        </div>
+        <div id="photo-area">
+        </div>
+    </div>
+</body>
+
+</html>
